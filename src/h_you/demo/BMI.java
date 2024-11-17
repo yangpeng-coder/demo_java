@@ -35,5 +35,15 @@ public class BMI {
             System.out.println("过于肥胖");
         }
 
+        String fruit = "mango";
+        int opt = switch(fruit) {
+            case "orange" -> 1;
+            case "apple", "pear" -> 2;
+            default -> {
+                int code = fruit.hashCode();
+                yield code;
+            }
+        };
+        System.out.println(opt);
     }
 }

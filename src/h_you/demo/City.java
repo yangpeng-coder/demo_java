@@ -22,7 +22,7 @@ public class City {
     public City(String name, Double latitude, Double longitude) {
         if (name == "shanghai") {
             throw new IllegalArgumentException(name + " is not support.");
-        } else if(name == null ||name.isBlank()) {
+        } else if (name == null || name.isBlank()) {
             this.name = defaultName();
         } else {
             this.name = name;
